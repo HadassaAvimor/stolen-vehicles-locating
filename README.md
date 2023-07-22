@@ -14,9 +14,9 @@ MongoDB
 React
 
 Once you have these installed, you can clone the repository and run the following commands:
-### server:
+### Server:
 pip install -r requirements.txt
-### client:
+### Client:
 npm install
 
 
