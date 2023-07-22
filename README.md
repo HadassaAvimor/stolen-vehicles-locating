@@ -6,8 +6,11 @@ This project is a system for identifying and locating stolen vehicles. It is wri
 To run the project, you will need to have the following installed:
 
 Python 3
+
 Pip
+
 MongoDB
+
 React
 
 Once you have these installed, you can clone the repository and run the following commands:
@@ -16,7 +19,6 @@ pip install -r requirements.txt
 ### client:
 npm install
 
-This will start the server on port 8000. You can then open the project in your browser at http://localhost:8000.
 
 ### Features
 The system has the following features:
