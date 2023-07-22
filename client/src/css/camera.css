@@ -1,0 +1,32 @@
+
+body{
+    background-color: black;
+
+}
+.wrapper{
+position: relative;
+  width: 100%;
+
+}
+.webcamCapture__button{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    color: rgb(155, 13, 13)
+}
+@media only screen and (max-device-width : 640px) {
+    .webcamCapture {
+        position:fixed;
+        height:100%;
+        width:100%;
+   }
+}
+@media only screen and (max-device-width: 768px) {
+    .webcamCapture {
+        position:fixed;
+        height:100%;
+        width:100%;
+   }
+}
