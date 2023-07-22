@@ -2,7 +2,7 @@
 Stolen Vehicle Identification and Location System
 This project is a system for identifying and locating stolen vehicles. It is written in Python as server, React as client, and a MongoDB as database. Deep learning technology is used in the system to extract the details of the vehicle from the photograph and check if it is indeed stolen, compared to the vehicle data in Israel.
 
-# How to run the project
+### How to run the project
 To run the project, you will need to have the following installed:
 
 Python 3
@@ -18,13 +18,13 @@ npm install
 
 This will start the server on port 8000. You can then open the project in your browser at http://localhost:8000.
 
-# Features
+### Features
 The system has the following features:
 
 It can identify stolen vehicles based on their photographs.
 It can locate stolen vehicles by comparing their details to the vehicle data in Israel.
 It can generate reports on stolen vehicles.
-# To-do list
+### To-do list
 The following are some of the to-do items for the project:
 
 Improve the accuracy of the deep learning model.
