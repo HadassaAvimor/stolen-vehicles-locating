@@ -1,4 +1,5 @@
 import datetime
+import os
 
 import pymongo
 
@@ -11,7 +12,7 @@ import pymongo
 class Inspector:
 
     def __init__(self):
-        self.client = pymongo.MongoClient('mongodb+srv://AvigailMintz:324947977@cluster0.dlu3tcy.mongodb.net/test')
+        self.client = pymongo.MongoClient(os.environ['DB_CONNECTION_STRING'])
         self.my_db = self.client['python_project']
         self.inspectors = self.my_db['inspectors']
 
