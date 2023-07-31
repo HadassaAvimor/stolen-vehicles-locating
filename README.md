@@ -12,11 +12,15 @@ Pip
 
 NodeJS
 
+
+
 Once you have these installed, you can clone the repository and run the following commands:
 ### Server:
 pip install -r requirements.txt
 ### Client:
 npm install
+
+In the server directory add .env file, to include environment variables.
 
 
 ### Features
@@ -28,8 +32,7 @@ It can generate reports on stolen vehicles.
 ### To-do list
 The following are some of the to-do items for the project:
 
-Improve the accuracy of the deep learning model.
-Add more features to the system, such as the ability to track stolen vehicles.
+Model training to identify the vehicle model and implement the appropriate functions.
 Make the system more user-friendly.
 ### Contact
 If you have any questions or suggestions, please open an issue.
