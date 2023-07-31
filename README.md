@@ -10,9 +10,7 @@ Python 3
 
 Pip
 
-MongoDB
-
-React
+NodeJS
 
 Once you have these installed, you can clone the repository and run the following commands:
 ### Server:
