@@ -1,11 +1,16 @@
 from datetime import datetime
+from enum import Enum
 
 from pymongo import MongoClient
 import os
 
-client = MongoClient(os.getenv('DB_CONNECTION_STRING'))
+client = MongoClient(os.environ['DB_CONNECTION_STRING'])
 my_db = client['python_project']
-inspectors = my_db['inspectors']
+
+
+class Collections(Enum):
+    inspectors = my_db['inspectors'],
+    reports = my_db['reports']
 
 
 def insert_row(collection, row):
@@ -15,15 +20,14 @@ def insert_row(collection, row):
     :param row: json row to insert.
     :return:
     """
-    a = collection.insert_one(row)
-    print(a)
+    collection.insert_one(row)
 
 
-insert_row(inspectors, {"first_name": 'inspector[]',
-                        "last_name": 'inspector[]',
-                        "birth_date": 'inspector[]',
-                        "email_address": ' inspector[]',
-                        "start_date": datetime.today(),
-                        "number_id": 'inspector[]',
-                        "phone_number": 'inspector[]'
-                        })
+insert_row(Collections.inspectors.value[0], {"first_name": 'inspector[]',
+                                    "last_name": 'inspector[]',
+                                    "birth_date": 'inspector[]',
+                                    "email_address": ' inspector[]',
+                                    "start_date": datetime.today(),
+                                    "number_id": 'inspector[]',
+                                    "phone_number": 'inspector[]'
+                                    })
