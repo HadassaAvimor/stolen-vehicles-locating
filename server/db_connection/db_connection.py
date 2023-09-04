@@ -4,7 +4,7 @@ from enum import Enum
 from pymongo import MongoClient
 import os
 
-client = MongoClient('mongodb+srv://AvigailMintz:324947977@cluster0.dlu3tcy.mongodb.net/test')
+client = MongoClient(os.getenv('DB_CONNECTION_STRING'))
 my_db = client['python_project']
 
 
