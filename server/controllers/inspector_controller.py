@@ -1,17 +1,15 @@
 import json
 # from urllib import request
 from flask import jsonify, Blueprint, request
-from Model.dataObject import inspector
+from db_connection.db_connection import Collections
+from db_connection.crud import get_row_by_id, get_all_rows, insert_row, delete_row_by_id
 
 app_inspector = Blueprint('app_inspector', __name__)
-global my_in
-my_in = inspector.Inspector()
 
 
 @app_inspector.route('/inspectors/<inspector_id>')
 def get(inspector_id):
-    # my_in = inspector.Inspector()
-    response = jsonify(my_in.get_by_id(inspector_id))
+    response = jsonify(get_row_by_id(Collections.inspectors, inspector_id))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
@@ -28,8 +26,7 @@ def login(inspector_id, inspector_first_name, inspector_last_name):
 
 @app_inspector.route('/inspectors')
 def get_all():
-    # my_in = inspector.Inspector()
-    response = jsonify(my_in.get_all())
+    response = jsonify(get_all_rows(Collections.inspectors))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
@@ -53,6 +50,3 @@ def update(inspector_id):
 def add_new():
     # my_in = inspector.Inspector()
     return my_in.add_new(request.json['newInspector'])
-
-
-

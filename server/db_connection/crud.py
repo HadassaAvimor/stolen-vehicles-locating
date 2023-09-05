@@ -1,10 +1,9 @@
-from db_connection import Collections
 
 
 def get_row_by_id(collection, id):
     """
     A function to fetch row from DB by id, according to collection param.
-    :param collection:  a collection to fetch from,  from enum Collections .
+    :param collection:  a collection to fetch from, from enum Collections .
     :param id: str
     :return:
     """
@@ -18,7 +17,7 @@ def get_all_rows(collection):
     :param collection:  a collection to fetch from,  from enum Collections .
     :return: List[row]
     """
-    return list(collection.find({}))
+    return list(collection.value[0].find({}))
 
 
 def insert_row(collection, row):

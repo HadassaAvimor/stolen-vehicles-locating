@@ -1,5 +1,4 @@
 from flask import jsonify, Blueprint
-from model.data_objects import report
 from flask_cors import CORS
 
 app_report = Blueprint('app_report', __name__)

@@ -1,6 +1,6 @@
 from urllib import request, response
 import json
-import vehicle_data_extraction
+from model import vehicle_data_extraction
 
 
 def fetch_car_info(license_number):

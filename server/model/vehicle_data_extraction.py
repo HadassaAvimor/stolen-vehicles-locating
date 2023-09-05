@@ -7,7 +7,6 @@ from matplotlib import pyplot as plt
 from keras.models import load_model
 import requests
 from PIL.Image import fromarray
-from car_identify.fetch_car_info import fetch_car_info
 
 
 def extract_vehicles_features(base64):
