@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
-import Webcam from 'react-webcam'
+import React, { useState } from 'react';
+import Webcam from 'react-webcam';
+import '../../style/Camera.css';
+// import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonChecked'
 // const WebcamComponent = () => <Webcam />
 const videoConstraints = {
   width: 400,
@@ -14,48 +16,24 @@ const Camera = () => {
     setPicture(pictureSrc);
   })
   return (
-    <div>
-      {/* <h2 className="mb-5 text-center">
-        React Photo Capture using Webcam Examle
-      </h2> */}
-      <div>
-        {picture == '' ? (
-          <Webcam
-            audio={false}
-            height={1000}
-            ref={webcamRef}
-            width={1000}
-            screenshotFormat="image/jpeg"
-            videoConstraints={videoConstraints}
-          />
-        ) : (
-          <img src={picture} />
-        )}
-      </div>
-      <div>
-        {picture != '' ? (
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              // send the imae to server
-            }}
-            className="btn btn-primary"
-          >
-            send image to server
-          </button>
-        ) : (
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              capture();
-            }}
-            className="btn btn-danger"
-          >
-            Capture
-          </button>
-        )}
-      </div>
+    <div className="webcamCapture">
+      <Webcam
+        audio={false}
+        height={videoConstraints.height}
+        ref={webcamRef}
+        screenshotFormat="image/jpeg"
+        width={videoConstraints.width}
+        videoConstraints={videoConstraints}
+      />
+      <button    
+      type='radio'     
+       className="webcamCapture__button"
+        onClick={capture}
+        fontSize="large"
+>
+        </button>
     </div>
-  )
+  );
+
 }
 export default Camera
