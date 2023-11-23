@@ -1,26 +1,33 @@
-.webcamCapture {
-    position: relative;
-    width: 100%;
+
+.Container {
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-@media only screen and (max-device-width : 640px) {
-    .webcamCapture {
-        position:fixed;
-        height:100%;
-        width:100%;
-   }
+
+button {
+  margin-top: 10px;
+  padding: 10px 40px;
+  border: none;
+  background-color: rgb(6, 191, 233);
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
 }
-@media only screen and (max-device-width: 768px) {
-    .webcamCapture {
-        position:fixed;
-        height:100%;
-        width:100%;
-   }
+
+img {
+  width: 400px;
+  object-fit: cover;
+  height: 400px;
 }
-  .webcamCapture__button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    /* transform: translate(-50%, -50%); */
-    cursor: pointer;
-    color: white;
-  }
+/* 
+.App {
+  display: flex;
+  align-items: center;
+  width: 150vw;
+  justify-content: center;
+  background-color: #262b36;
+} */
