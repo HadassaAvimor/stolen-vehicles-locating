@@ -1,7 +1,7 @@
 
 import Webcam from "react-webcam";
 import React, { useState, useRef, useCallback } from "react";
-
+import '../../style/Camera.css'
 function Camera() {
   const webcamRef = useRef(null);
   const [img, setImg] = useState(null);
